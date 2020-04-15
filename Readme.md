@@ -1,4 +1,4 @@
 # React Native Layouts
 
 ## Login Layout
-![Login Layout](./assets/img/login.png =300x600)
+<img src="./assets/img/login.png" width="300">

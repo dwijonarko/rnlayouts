@@ -1,10 +1,10 @@
 import React from 'react';
-import HomeScreen from './screens/HomeScreen';
+import Router from './route/Router';
 
 const App: () => React$Node = () => {
   return (
     <>
-    <HomeScreen />
+    <Router />
     </>
   );
 };

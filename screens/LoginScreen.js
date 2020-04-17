@@ -1,9 +1,16 @@
 import React from 'react';
 import {View, Text, StyleSheet,TextInput,TouchableOpacity} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
+const facebook = <Icon name="facebook" size={20} color="#ffffff" />;
+const google = <Icon name="google" size={20} color="#ffffff" />;
+const twitter = <Icon name="twitter" size={20} color="#ffffff" />; 
+const github = <Icon name="github" size={20} color="#ffffff" />;
+const heart = <Icon name="heart" size={13} color="#FE6869" solid />;
 const LoginScreen = () => {
   return (
-    <View style={styles.container}>
+    <LinearGradient style={styles.container}  colors={['#FE6869', '#FD6867']}>
       <View style={styles.header}>
         <Text style={styles.titleText}>Log In</Text>
         <Text style={styles.subTitleText}>Welcome back</Text>
@@ -23,33 +30,32 @@ const LoginScreen = () => {
           <Text  style={{color:'grey'}}>Login with social media</Text>
           <View style={{flexDirection:"row",justifyContent:"space-between",paddingVertical:20}}>
               <TouchableOpacity style={styles.buttonBlue}>
-                <Text style={styles.buttonText}>Facebook</Text>
+                 <Text style={styles.buttonText}>{facebook} Facebook</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.buttonRed}>
-                <Text style={styles.buttonText}>Google</Text>
+                <Text style={styles.buttonText}>{google} Google</Text>
               </TouchableOpacity>
           </View>
           <View style={{flexDirection:"row",justifyContent:"space-between",paddingVertical:0}}>
               <TouchableOpacity style={styles.buttonLightBlue}>
-                <Text style={styles.buttonText}>Twitter</Text>
+                <Text style={styles.buttonText}>{twitter} Twitter</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.buttonGrey}>
-                <Text style={styles.buttonText}>Github</Text>
+                <Text style={styles.buttonText}> {github} Github</Text>
               </TouchableOpacity>
           </View>
         </View>
     </View>
     <View style={styles.footer}>
-        <Text style={styles.footerText}>Build with love </Text>
-        </View>
-      </View>
+        <Text style={styles.footerText}>Build with {heart} by @dwijonarko</Text>
+    </View>
+    </LinearGradient>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#607d8b',
   },
   header: {
     flex: 1,
@@ -73,32 +79,21 @@ const styles = StyleSheet.create({
   },
   footerText:{
     color:'grey',
-    textAlign:"center"
+    textAlign:"center",
+    fontSize:15
   },
   titleText: {
     color: 'white',
     fontSize: 60,
-    fontWeight: 'bold',
-    fontFamily: 'montserrat',
+    fontFamily:'Montserrat-Thin'
   },
   subTitleText: {
     color: 'white',
     fontSize: 28,
-    fontWeight: 'bold',
     fontFamily: 'sans-serif-thin',
   },
   textBox:{
-    marginTop:35,
-    paddingVertical:15,
     borderRadius:10,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
   },
   textInput:{
     marginHorizontal:20,

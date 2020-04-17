@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Header, Avatar, ListItem} from 'react-native-elements';
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const list = [
     {
       title: 'Mobile Application',
@@ -30,12 +30,7 @@ const HomeScreen = () => {
       <LinearGradient
         colors={['#FE6869', '#FD6867']}
         style={styles.linearGradient}>
-        <Header
-          containerStyle={styles.header}
-          leftComponent={{icon: 'menu', color: '#fff'}}
-          centerComponent={{text: '@dwijonarko', style: {color: '#fff'}}}
-          rightComponent={{icon: 'home', color: '#fff'}}
-        />
+        
         <View style={styles.avatarBox}>
           <View style={styles.avatarBorder}>
             <Avatar

@@ -8,7 +8,7 @@ const google = <Icon name="google" size={20} color="#ffffff" />;
 const twitter = <Icon name="twitter" size={20} color="#ffffff" />; 
 const github = <Icon name="github" size={20} color="#ffffff" />;
 const heart = <Icon name="heart" size={13} color="#FE6869" solid />;
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   return (
     <LinearGradient style={styles.container}  colors={['#FE6869', '#FD6867']}>
       <View style={styles.header}>
@@ -21,7 +21,7 @@ const LoginScreen = () => {
           <TextInput style={styles.textInput} placeholder="Password" />
         </View>
         <View style={styles.centerBox}>
-        <TouchableOpacity style={styles.buttonSkyBlue}>
+        <TouchableOpacity style={styles.buttonSkyBlue} onPress={() => navigation.navigate('Home')}>
                 <Text style={styles.buttonText}>Login</Text>
               </TouchableOpacity>
           <Text style={styles.forgotPasswordText}>Forgot password ?</Text>

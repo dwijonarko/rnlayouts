@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Header, Avatar, ListItem} from 'react-native-elements';
+import Footer from '../components/Footer';
 const HomeScreen = ({navigation}) => {
   const list = [
     {
@@ -69,10 +70,12 @@ const HomeScreen = ({navigation}) => {
               leftIcon={{name: item.icon}}
               bottomDivider
               chevron={{color: '#FE6869'}}
+              onPress={()=>navigation.navigate('Food')}
             />
           ))}
         </View>
       </View>
+      <Footer></Footer>
     </View>
   );
 };
@@ -113,15 +116,7 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignContent: 'space-between',
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.34,
-    shadowRadius: 3.27,
-    elevation: 2,
+   
   },
   infoText: {
     alignItems: 'center',

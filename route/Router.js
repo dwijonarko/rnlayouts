@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
+import FoodScreen from '../screens/FoodScreen';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Text,View} from 'react-native';
 const Stack = createStackNavigator();
@@ -28,6 +29,16 @@ function Router() {
             headerTitle: props => <LogoTitle {...props} />,
             headerStyle: {
               backgroundColor: '#FE6869',
+            },
+          }}
+        />
+         <Stack.Screen
+          name="Food"
+          component={FoodScreen}
+          options={{
+            headerShown:false,
+            headerStyle: {
+              backgroundColor: '#F3F2F5',
             },
           }}
         />

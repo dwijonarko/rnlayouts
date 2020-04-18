@@ -2,12 +2,11 @@ import React from 'react';
 import {View, Text, StyleSheet,TextInput,TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-
+import Footer from '../components/Footer';
 const facebook = <Icon name="facebook" size={20} color="#ffffff" />;
 const google = <Icon name="google" size={20} color="#ffffff" />;
 const twitter = <Icon name="twitter" size={20} color="#ffffff" />; 
 const github = <Icon name="github" size={20} color="#ffffff" />;
-const heart = <Icon name="heart" size={13} color="#FE6869" solid />;
 const LoginScreen = ({navigation}) => {
   return (
     <LinearGradient style={styles.container}  colors={['#FE6869', '#FD6867']}>
@@ -46,9 +45,7 @@ const LoginScreen = ({navigation}) => {
           </View>
         </View>
     </View>
-    <View style={styles.footer}>
-        <Text style={styles.footerText}>Build with {heart} by @dwijonarko</Text>
-    </View>
+    <Footer />
     </LinearGradient>
   );
 };
@@ -70,17 +67,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     paddingHorizontal: 20,
     paddingVertical: 30,
-  },
-  footer: {
-    position: 'absolute',
-    bottom:0,
-    width:'100%',
-    alignItems:"center"
-  },
-  footerText:{
-    color:'grey',
-    textAlign:"center",
-    fontSize:15
   },
   titleText: {
     color: 'white',

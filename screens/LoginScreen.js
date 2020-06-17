@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 3,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f5f5f5',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingHorizontal: 20,
